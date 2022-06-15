@@ -1,0 +1,29 @@
+<form  (ngSubmit)="onSubmit()">
+    <h3>Update Object Type</h3>
+    <div class="text-field">
+        <label>Name</label>
+        <input type="text" id="name" [(ngModel)]="ot.name" name="nameOfOT">
+    </div>
+    
+    <div class="text-field">
+        <label>Parent for Object Type: </label>
+       <mat-radio-group name="RB" [(ngModel)]="ot.parent_id">
+            <mat-radio-button *ngFor="let objectType of ots" [value]="objectType.id" name="{{objectType.id}}" (click)="changeObjectTypeParent(objectType.id)">
+                {{objectType.name}}
+            </mat-radio-button>
+        </mat-radio-group> 
+    </div>
+
+    <div class="text-fieldCheck">
+        <label class="labelOne">Attribute for Object Type: </label>
+        <mat-checkbox *ngFor="let attributeOfObjectType of ot.attributes"
+                name="{{attributeOfObjectType.id}}-name" type="checkbox" [checked]="attributeOfObjectType.checked" (click)="changeAttribute(attributeOfObjectType.id)">                             
+            {{attributeOfObjectType.name}}</mat-checkbox>
+        <mat-checkbox *ngFor="let attribute of attrs"
+            name="{{attribute.id}}-name" type="checkbox" (click)="changeAttribute(attribute.id)" >                             
+            {{attribute.name}}</mat-checkbox>
+    </div>
+    <button type="submit" name="submitButton">Submit</button>
+    <button (click)="goBack()" type="button" name="cancelButton">Cancel</button>
+
+</form>

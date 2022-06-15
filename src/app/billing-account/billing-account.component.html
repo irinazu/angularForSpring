@@ -1,0 +1,20 @@
+<div class="wrapper">
+   <table class="iksweb">
+       <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Balance</th>
+            </tr>
+       </thead>
+       <tbody >
+            <tr *ngFor="let account of accounts" [routerLink]="['updateBillingAccount',account.id]">
+                <td *ngFor="let param of account.parameters">{{param.value}}</td>        
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button [routerLink]="['createBillingAccount',id]">Create Account</button>
+        <router-outlet></router-outlet>
+    </div>
+</div>

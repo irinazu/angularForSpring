@@ -1,0 +1,10 @@
+<form  (ngSubmit)="onSubmit()">
+    <div *ngFor="let param of objectC.parameters;let index=index" class="text-field">
+        <label>{{param.attribute.name}}</label>
+        <input type="text" name={{index}} [(ngModel)]="objectC.parameters[index].value">
+    </div>
+    <p>{{error}}</p>
+    <button type="submit" name="submitButton">Submit</button>
+    <button (click)="goBack()" type="button" name="cancelButton">Cancel</button>
+
+</form>

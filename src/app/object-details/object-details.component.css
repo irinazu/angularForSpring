@@ -1,0 +1,47 @@
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.delete{
+  margin-bottom: 10px;
+  font-size: 20px;
+
+}
+.details{
+  width: 200px;
+  font-size: 16px;
+}
+table.iksweb{
+  text-decoration: none;
+  border-collapse:collapse;
+  width:100%;
+  text-align:left;
+  border: 1px solid #354251;
+}
+table.iksweb td{
+  border: 1px solid #354251;
+  padding:15px 10px
+}
+.title{
+  border: 1px solid black;
+  font-weight:normal;
+  font-size:16px;
+  color:#ffffff;
+  background-color:#3542518f;
+}
+button{
+  margin: 5px 0px;
+  width: 60px;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background: #3542518f;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+button:hover{
+background: rgba(0, 0, 0, 0.817);
+}

@@ -1,0 +1,17 @@
+<form  (ngSubmit)="onSubmit()">
+    <h3>Create Attribute</h3>
+    <div class="text-field">
+        <label class="inputName">Name</label>
+        <input type="text" id="name" [(ngModel)]="atr.name" name="nameOfOT">
+    </div>
+    <!--<div class="RG">
+       <mat-radio-group name="RB" [(ngModel)]="atr.typeOfAttribute">
+            <mat-radio-button *ngFor="let t of types" [value]="t" name="{{t.id}}" class="radioButton">
+                {{t.name}}
+            </mat-radio-button>
+        </mat-radio-group> 
+    </div>-->
+    <button type="submit" name="submitButton">Submit</button>
+    <button (click)="goBack()" type="button" name="cancelButton">Cancel</button>
+
+</form>

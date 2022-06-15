@@ -1,0 +1,11 @@
+
+<form  (ngSubmit)="onSubmit()">
+    <h3>Update Attribute</h3>
+    <label>Attribute Name</label>
+    <input [(ngModel)]="attribute.name" type="text" name="nameOfAttribute">
+    <!--<p>Type of Attribute Name</p>-->
+    <!--<input [(ngModel)]="attribute.typeOfAttribute.name" type="text" name="nameOftypeOfAttribute">-->
+    <button type="submit" name="submitButton">Submit</button>
+    <button (click)="goBack()" type="button" name="cancelButton">Cancel</button>
+
+</form>

@@ -1,0 +1,63 @@
+.mainWrapper{
+  border-radius: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+table.iksweb{
+  text-decoration: none;
+  width:100%;
+  text-align:left;
+  border: 1px solid #dbdee3;
+  padding:50px 40px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+table.iksweb tr{
+  border: 1px solid #354251;
+}
+table.iksweb td{
+  padding:8px 10px;
+}
+  button{
+    margin: 3px;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background: #027ad6;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.attributes{
+  font-size: 17px;
+  font-weight: 500;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+.title{
+  font-size: 18px;
+  font-weight: 600;
+}
+button:hover{
+  background-color: #3e78a4;
+}
+.titleWithButton{
+  display: flex;
+  justify-content: space-between;
+}
+.titleWithButton button{
+  width: 100px;
+  height: 40px;
+}
+.title{
+  font-weight: bold;
+  width: 140px;
+  font-size: 19px;
+
+}

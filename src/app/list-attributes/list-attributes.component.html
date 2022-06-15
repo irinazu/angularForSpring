@@ -1,0 +1,23 @@
+<div class="mainWrapper">
+    <div class="titleWithButton">
+        <p class="title">List of all Attributes</p>
+        <button routerLink="/createAttribute">Create attribute</button>
+    </div>
+    <table class="iksweb">
+        <thead>
+            <tr>
+                <td class="title">Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let attribute of attributes">
+                <td class="attributes">{{attribute.name}}</td>
+                <!--<td>{{attribute.typeOfAttribute.name}}</td>-->
+                <td>
+                    <button (click)="onDeleteAttribute(attribute.id)">Delete</button>
+                    <button [routerLink]="['updateAttribute', attribute.id]">Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

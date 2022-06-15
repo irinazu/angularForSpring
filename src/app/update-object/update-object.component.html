@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <form  (ngSubmit)="onSubmit()">
+        <div *ngFor="let param of objectC.parameters;let index=index" >
+            <p>{{param.attribute.name}}</p>
+            <input type="text" name={{index}} [(ngModel)]="objectC.parameters[index].value">
+        </div>
+        <button type="submit" name="submitButton">Submit</button>
+    </form>
+    <app-list-billing-accounts></app-list-billing-accounts>
+    
+</div>

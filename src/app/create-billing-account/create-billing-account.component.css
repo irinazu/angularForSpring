@@ -1,0 +1,36 @@
+body{
+    height: 100%;
+
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.text-field{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+input{
+  border: none;
+  background: hsl(0 0% 93%);
+  border-radius: .25rem;
+  padding: .75rem 1rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+button{
+    margin: 5px;
+    width: 70px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+	color: #fff;
+	background: #027ad6;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+

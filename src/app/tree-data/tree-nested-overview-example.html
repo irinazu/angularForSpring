@@ -1,0 +1,74 @@
+<div class="block">
+  <div class="wrapper"> 
+    <div class="mainWrapper">
+      <div class="titleWithButton">
+        <p class="title">Object Type</p>
+        <button routerLink="/createObjectType" class="buttonOnMainPage">Create Object Type</button>
+        <button [routerLink]="'searchObject'" class="buttonOnMainPage">Find Object</button>
+      </div>
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="treeMain">
+      <!-- This is the tree node template for leaf nodes -->
+      <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding id="{{node.id}}" >
+        <!-- use a disabled button to provide padding for tree leaf -->
+        <button mat-icon-button disabled></button>
+        <div class="treeName">{{node.name}}</div>
+        <div class="buttonsList">
+          <button (click)="onDeleteObjectType(node.id)" class="buttonOnMainPageList">Delete</button>
+          <button [routerLink]="['updateObjectType', node.id]" class="buttonOnMainPageList">Update</button>
+          <button [routerLink]="['createObject', node.id]" class="buttonOnMainPageListLong">Create Object</button>
+        </div>
+      </mat-tree-node>
+      <!-- This is the tree node template for expandable nodes -->
+      <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding id="{{node.id}}">
+        <button mat-icon-button matTreeNodeToggle
+                [attr.aria-label]="'Toggle ' + node.name">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+          </mat-icon>
+        </button>
+      <div class="treeName">{{node.name}}</div>
+        <div class="buttonsList">
+          <button (click)="onDeleteObjectType(node.id)" class="buttonOnMainPageList">Delete</button>
+          <button [routerLink]="['updateObjectType', node.id]" class="buttonOnMainPageList">Update</button>
+          <button [routerLink]="['createObject', node.id]" class="buttonOnMainPageListLong">Create Object</button>
+        </div>
+      </mat-tree-node>
+    </mat-tree>
+    </div>
+    <div class="mainWrapper">
+      <p class="title">Attributes for current Object Type</p>
+      <table class="iksweb">
+        <thead>
+            <tr>
+                <td>Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let attribute of attributes">
+                <td class="attributes">{{attribute.name}}</td>
+                <!--<td>{{attribute.typeOfAttribute.name}}</td>-->
+                <button (click)="onDeleteAttribute(attribute.id)" class="buttonOnMainPage">Delete</button>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>  
+      <app-list-attributes></app-list-attributes>
+    </div>
+
+  </div>
+
+  <div>
+    <p>Objects</p>
+    <tr *ngFor="let obj of objectsC">
+      <td >{{obj.name}}</td>
+      <td>
+        <a  [routerLink]="['detailsOfObject', obj.id]" class="delete" href="#">Details</a>
+        <a  [routerLink]="['updateObject', obj.id]" class="delete" href="#">Update</a>
+        <!--<a  (click)="deleteObject(obj.id)" class="delete" href="#">Delete</a>-->
+      </td>
+    </tr>
+  </div>
+</div>
+

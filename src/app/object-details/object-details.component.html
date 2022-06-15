@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="details">
+        <p class="delete">Object Details</p>
+        <button  (click)="onUpdateObject()">Update</button>
+
+        <table class="iksweb">
+            <tr *ngFor="let param of objC.parameters" >
+                <td class="title">{{param.attribute.name}}</td>
+                <td>{{param.value}}</td>
+            </tr>
+        </table>
+    </div>
+    <app-list-billing-accounts></app-list-billing-accounts>
+    <div>
+        <app-billing-account></app-billing-account>
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+.wrapper{
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+  }
+table thead tr{
+  font-weight:normal;
+  font-size:14px;
+  color:#ffffff;
+  background-color:#354251;
+}
+  table.iksweb{
+    text-decoration: none;
+    border-collapse:collapse;
+    width:100%;
+    text-align:center;
+  }
+	table.iksweb th{
+    font-weight:normal;
+    font-size:14px;
+     color:#ffffff;
+     background-color:#354251;
+  }
+	table.iksweb td{
+    font-size:13px;color:#354251;
+  }
+	table.iksweb td,table.iksweb th{
+    white-space:pre-wrap;
+    padding:10px 5px;
+    line-height:13px;
+    vertical-align: middle;
+    border: 1px solid #354251;
+  }	
+  table.iksweb tr:hover{
+    background-color:#e1ebf2
+  }
+	table.iksweb tr:hover td{
+    color:#0a0a0a;cursor:default;
+  }
+  button{
+    margin-left: 8px;
+    width: 80px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background: #354251;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+button:hover{
+  background: black;
+}
