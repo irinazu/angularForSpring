@@ -8,9 +8,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "heroku-postbuild": "ng build --prod && npm install -g http-server",
-    "start": "http-server dist/base-microservice index.html $PORT",
-    "build": "ng build",
+    "start": "ng serve",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
