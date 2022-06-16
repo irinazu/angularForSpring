@@ -1,15 +1,16 @@
 {
-  "name": "microservice-frontend",
-  "version": "0.0.0",
+
   "browser": {
     "fs": false,
     "path": false,
     "os": false
   },
   "scripts": {
+    "name": "microservice-frontend",
+    "version": "0.0.0",
     "ng": "ng",
     "heroku-postbuild": "ng build --prod && npm install -g http-server-spa",
-    "start": "http-server-spa dist/angular-frontend-for-spring index.html $PORT",
+    "start": "http-server-spa dist/microservice-frontend index.html $PORT",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
